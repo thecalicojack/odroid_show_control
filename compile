@@ -1,6 +1,14 @@
+#!/bin/bash
+
 mkdir -p build
 cd src
 
-g++ CApp.h CApp.cpp CMovingTxt.h CMovingTxt.cpp CStatusApp.h CStatusApp.cpp CMPDApp.h CMPDApp.cpp CRadioApp.h CRadioApp.cpp CMainApp.h CMainApp.cpp odroid_control.cpp -o ../build/odroid_control -pthread -I/usr/include/gstreamer-0.10 -I/usr/include/glib-2.0 -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/include/libxml2  -pthread -lgstreamer-0.10 -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -lxml2 -lglib-2.0 -lmpdclient  
+g++ CApp.h CApp.cpp CMovingTxt.h CMovingTxt.cpp CStatusApp.h CStatusApp.cpp \
+CMPDApp.h CMPDApp.cpp CRadioApp.h CRadioApp.cpp CMainApp.h CMainApp.cpp \
+odroid_control.cpp -o ../build/odroid_control \
+-pthread -I/usr/include/gstreamer-0.10 -I/usr/include/glib-2.0 \
+-I/usr/lib/arm-linux-gnueabihf/glib-2.0/include -I/usr/include/libxml2  \
+-pthread -lgstreamer-0.10 -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 \
+-lxml2 -lglib-2.0 -lmpdclient
 
 cd ..
